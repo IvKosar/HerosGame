@@ -7,9 +7,7 @@ public abstract class Character {
         this.hp = hp;
     }
 
-    void kick(Character c) {
-
-    }
+    abstract void kick(Character c);
 
     boolean isAlive () {
         return this.hp > 0;

@@ -50,6 +50,7 @@ public class GameManager {
             temp_c1.kick(temp_c2);
             if(temp_c2.isAlive() != true){
                 System.out.println(temp_c1.toString() + " wins the battle!");
+                break;
             }
             index = 1 - index;
         }

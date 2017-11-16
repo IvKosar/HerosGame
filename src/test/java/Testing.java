@@ -13,8 +13,11 @@ public class Testing {
     public void creating() throws Exception{
         Hobbit hobbit = new Hobbit();
         assertEquals("Hobbit", hobbit.toString());
+        assertEquals(true, hobbit.isAlive());
         int hp1 = hobbit.hp;
         Elf elf = new Elf();
+        hobbit.toCry();
+        hobbit.kick(elf);
         assertEquals("Elf", elf.toString());
         elf.kick(hobbit);
         int hp2 = hobbit.hp;
