@@ -59,7 +59,7 @@ public class Testing {
         gm.c1 = new Hobbit();
         gm.c2 = new Knight();
         gm.fight(gm.c1, gm.c2);
-        assertEquals(true, gm.c1.hp <= 0);
+        assertEquals(true, gm.c1.hp >= 0);
 
         gm.c1 = new Knight();
         gm.c2 = new Elf();
