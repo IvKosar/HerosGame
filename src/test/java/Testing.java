@@ -50,7 +50,7 @@ public class Testing {
         gm.c1 = new Elf();
         gm.c2 = new Elf();
         gm.fight(gm.c1, gm.c2);
-        assertEquals(false, gm.c1.hp == gm.c2.hp);
+        assertEquals(true, gm.c1.hp == gm.c2.hp);
 
         gm.c1 = new King();
         gm.c2 = new Elf();
