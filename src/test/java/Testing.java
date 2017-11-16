@@ -45,10 +45,12 @@ public class Testing {
         gm.c1 = new Hobbit();
         gm.c2 = new Hobbit();
         gm.fight(gm.c1, gm.c2);
+        assertEquals(true, gm.c1.hp == gm.c2.hp);
 
         gm.c1 = new Elf();
         gm.c2 = new Elf();
         gm.fight(gm.c1, gm.c2);
+        assertEquals(false, gm.c1.hp == gm.c2.hp);
 
         gm.c1 = new King();
         gm.c2 = new Elf();
@@ -56,6 +58,11 @@ public class Testing {
 
         gm.c1 = new Hobbit();
         gm.c2 = new Knight();
+        gm.fight(gm.c1, gm.c2);
+        assertEquals(true, gm.c1.hp <= 0);
+
+        gm.c1 = new Knight();
+        gm.c2 = new Elf();
         gm.fight(gm.c1, gm.c2);
     }
 }
