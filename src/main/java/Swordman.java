@@ -16,8 +16,8 @@ public class Swordman extends Character{
 
     void kick(Character c){
 
-        c.hp -= this.power;
-        this.power = rand.nextInt(this.b - this.a + 1) + this.a;
+        c.hp -= this.power + this.power / this.a + this.b;
+        this.power = rand.nextInt(this.b + this.a - 1) / this.a * this.b;
     }
 
     public static void main(String[] args) {
